@@ -12,7 +12,7 @@ jobs:
   comments:
     runs-on: ubuntu-latest
     steps:
-      - uses: sobolevn/restrict-cursing-action@latest
+      - uses: sobolevn/restrict-cursing-action@0.1.0
         with:
           text: "Thank you for your contribution! :+1:"
         env:
