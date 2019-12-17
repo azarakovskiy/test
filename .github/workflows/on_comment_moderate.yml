@@ -1,0 +1,19 @@
+name: On comment, moderate
+
+on:
+  issues:
+    types: [opened, edited]
+  issue_comment:
+    types: [created, edited]
+  pull_request:
+    types: [created, edited]
+
+jobs:
+  comments:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: sobolevn/restrict-cursing-action@latest
+        with:
+          text: "Thank you for your contribution! :+1:"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
