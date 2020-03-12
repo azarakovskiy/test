@@ -23,5 +23,5 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Is it behind check
-      run: exit $(git rev-list --left-only --count origin/master...HEAD)
+      run: exit $(git rev-list --left-only --count origin/master...$GITHUB_SHA)
       
