@@ -1,8 +1,8 @@
 name: comment on update
 
 on:
-  push:
-    branches-ignore: [master, develop, staging-develop]
+  pull_request:
+    branches: develop
     paths: 
       - 'vendor/**'
       - 'go.mod'
