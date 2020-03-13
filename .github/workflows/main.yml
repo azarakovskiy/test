@@ -5,12 +5,11 @@ on:
     branches-ignore: [master, develop, staging-develop]
     paths: 
       - 'vendor/**'
-      - 'go.sum'
+      - 'go.mod'
       - 'go.sum'      
     
 jobs:
   build:
-    if: github.event.issue.pull_request != ''
     runs-on: ubuntu-latest
     steps:
       - name: comment PR
